@@ -15,7 +15,7 @@ public class SimpleQueueConsumer {
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         // 定义队列的消费者
         QueueingConsumer consumer = new QueueingConsumer(channel);
-        /**
+        /*
          * 监听队列
          * queue: 队列名词
          * autoAck: 是否自动确认消息,true自动确认,false不自动要手动调用,建立设置为false

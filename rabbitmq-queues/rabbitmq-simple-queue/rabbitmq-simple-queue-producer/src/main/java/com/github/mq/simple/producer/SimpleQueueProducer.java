@@ -10,7 +10,7 @@ public class SimpleQueueProducer {
     public static void main(String[] args) throws Exception {
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
-        /**
+        /*
          * 参数：
          * queue: 队列名称
          * durable: 是否声明为一个持久队列，如果设置为true，那么该队列将在服务器重新启动后继续存在
@@ -23,7 +23,7 @@ public class SimpleQueueProducer {
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         // 消息内容
         String message = "Hello World!";
-        /**
+        /*
          * 参数
          1. exchange：交换机名称。简单模式下交换机会使用默认的 ""
          2. routingKey：路由名称
