@@ -3,22 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>rabbitmq-parent</artifactId>
+        <artifactId>rabbitmq-queues</artifactId>
         <groupId>com.github</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rabbitmq-queues</artifactId>
-
-    <name>02-rabbitmq-queues::rabbitmq工作模式</name>
+    <artifactId>rabbitmq-pub-sub-queue</artifactId>
+    <name>0203-rabbitmq-pub-sub-queue::发布订阅队列模式</name>
 
 
     <packaging>pom</packaging>
     <modules>
-        <module>rabbitmq-simple-queue</module>
-        <module>rabbitmq-work-queue</module>
-        <module>rabbitmq-pub-sub-queue</module>
+        <module>rabbitmq-pub-sub-queue-producer</module>
+        <module>rabbitmq-pub-sub-queue-consumer</module>
     </modules>
 
 

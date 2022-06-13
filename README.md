@@ -8,4 +8,7 @@ rabbitmq-parent
      └── rabbitmq-simple-queue -- 简单模式
         ├── rabbitmq-simple-queue-consumer -- 消费者        
         └── rabbitmq-simple-queue-producer -- 生产者
+     └── rabbitmq-work-queue -- 工作模式   
+        ├── rabbitmq-work-queue-consumer -- 消费者        
+        └── rabbitmq-work-queue-producer -- 生产者
 ```
