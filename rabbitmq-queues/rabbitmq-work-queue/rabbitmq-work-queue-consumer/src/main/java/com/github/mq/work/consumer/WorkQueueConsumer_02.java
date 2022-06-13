@@ -1,12 +1,16 @@
-package com.github.mq.simple.consumer;
+package com.github.mq.work.consumer;
 
 import com.github.common.util.ConnectionUtil;
 import com.rabbitmq.client.*;
 
-public class SimpleQueueConsumer {
-    private final static String QUEUE_NAME = "SIMPLE_QUEUE_TEST_01";
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
-    public static void main(String[] args) throws Exception {
+public class WorkQueueConsumer_02 {
+    private final static String QUEUE_NAME = "WORK_QUEUE_TEST_01";
+
+
+    public static void main(String[] args) throws IOException, TimeoutException {
         // 获取到连接以及mq通道
         Connection connection = ConnectionUtil.getConnection();
         // 从连接中创建通道
@@ -24,15 +28,10 @@ public class SimpleQueueConsumer {
              */
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) {
                 String message = new String(body);
-                System.out.println(" [Simple Queue] Received '" + message + "'");
+                System.out.println(" [Work Queue - 02] Received '" + message + "'");
             }
         };
-        /*
-         * 监听队列
-         * queue: 队列名词
-         * autoAck: 是否自动确认消息,true自动确认,false不自动要手动调用,建立设置为false
-         * callback: 消费者对象的接口
-         */
+
         channel.basicConsume(QUEUE_NAME, true, consumer);
     }
 }

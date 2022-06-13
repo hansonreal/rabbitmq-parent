@@ -31,7 +31,7 @@ public class SimpleQueueProducer {
          4. body：发送消息数据
          */
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-        System.out.println(" [x] Sent '" + message + "'");
+        System.out.println(" [Simple Queue] Sent '" + message + "'");
         //关闭通道和连接
         channel.close();
         connection.close();

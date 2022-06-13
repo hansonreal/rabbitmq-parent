@@ -11,7 +11,7 @@
 
     <artifactId>rabbitmq-common</artifactId>
 
-    <name>rabbitmq-common::通用模块</name>
+    <name>01-rabbitmq-common::通用模块</name>
 
     <dependencies>
         <dependency>

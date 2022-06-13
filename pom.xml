@@ -9,6 +9,10 @@
     <packaging>pom</packaging>
 
     <version>1.0.0</version>
+
+    <name>00-rabbitmq-parent</name>
+
+
     <modules>
         <module>rabbitmq-common</module>
         <module>rabbitmq-queues</module>
@@ -16,7 +20,7 @@
 
 
     <properties>
-        <amqp-client.version>3.4.1</amqp-client.version>
+        <amqp-client.version>5.7.1</amqp-client.version>
     </properties>
 
     <dependencyManagement>

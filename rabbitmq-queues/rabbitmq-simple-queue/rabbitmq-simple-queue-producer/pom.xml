@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>rabbitmq-simple-queue-producer</artifactId>
-    <name>rabbitmq-simple-queue-producer::简单模式-生产者</name>
+    <name>020101-rabbitmq-simple-queue-producer::简单队列模式-生产者</name>
 
     <dependencies>
         <dependency>

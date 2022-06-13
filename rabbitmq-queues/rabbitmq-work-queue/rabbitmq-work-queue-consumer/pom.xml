@@ -3,14 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>rabbitmq-simple-queue</artifactId>
+        <artifactId>rabbitmq-work-queue</artifactId>
         <groupId>com.github</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rabbitmq-simple-queue-consumer</artifactId>
-    <name>020102-rabbitmq-simple-queue-consumer::简单队列模式-消费者</name>
+    <artifactId>rabbitmq-work-queue-consumer</artifactId>
+    <name>020202-rabbitmq-work-queue-consumer::工作队列模式-消费者</name>
+
     <dependencies>
         <dependency>
             <groupId>com.github</groupId>
