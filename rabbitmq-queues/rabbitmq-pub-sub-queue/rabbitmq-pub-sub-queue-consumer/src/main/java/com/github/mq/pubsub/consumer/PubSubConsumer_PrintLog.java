@@ -27,7 +27,7 @@ public class PubSubConsumer_PrintLog {
              */
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) {
                 String message = new String(body);
-                System.out.println(" [Pub/Sub Queue - 01] Received '" + message + " 该操作日志需要打印'");
+                System.out.println(" [Pub/Sub Queue - 02] Received '" + message + " 该操作日志需要打印'");
             }
         };
 

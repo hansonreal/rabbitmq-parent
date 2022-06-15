@@ -23,7 +23,7 @@ public class PubSubConsumer_SaveLog {
              */
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) {
                 String message = new String(body);
-                System.out.println(" [Pub/Sub Queue - 02] Received '" + message + " 该操作日志需要保存'");
+                System.out.println(" [Pub/Sub Queue - 01] Received '" + message + " 该操作日志需要保存'");
             }
         };
 
