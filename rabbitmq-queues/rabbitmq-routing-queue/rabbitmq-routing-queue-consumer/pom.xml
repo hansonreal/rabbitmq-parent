@@ -3,18 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>rabbitmq-queues</artifactId>
+        <artifactId>rabbitmq-routing-queue</artifactId>
         <groupId>com.github</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rabbitmq-routing-queue</artifactId>
-    <packaging>pom</packaging>
-    <name>0204-rabbitmq-routing-queue::路由队列模式</name>
-    <modules>
-        <module>rabbitmq-routing-queue-producer</module>
-        <module>rabbitmq-routing-queue-consumer</module>
-    </modules>
+    <artifactId>rabbitmq-routing-queue-consumer</artifactId>
+
+    <name>020402-rabbitmq-routing-queue-consumer::路由模式-消费者</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github</groupId>
+            <artifactId>rabbitmq-common</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

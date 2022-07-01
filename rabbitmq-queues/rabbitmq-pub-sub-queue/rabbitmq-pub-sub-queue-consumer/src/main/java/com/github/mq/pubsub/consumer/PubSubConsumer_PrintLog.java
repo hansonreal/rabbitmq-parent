@@ -8,7 +8,7 @@ import java.util.concurrent.TimeoutException;
 
 public class PubSubConsumer_PrintLog {
 
-    private final static String QUEUE_NAME_02 = "PUB_SUB_QUEUE_TEST_02";
+    private final static String QUEUE_NAME_02 = "PUB_SUB_QUEUE_PRINT_LOG";
 
     public static void main(String[] args) throws IOException, TimeoutException {
         //1. 创建连接 Connection
