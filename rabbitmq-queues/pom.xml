@@ -19,6 +19,8 @@
         <module>rabbitmq-simple-queue</module>
         <module>rabbitmq-work-queue</module>
         <module>rabbitmq-pub-sub-queue</module>
+        <module>rabbitmq-topics-queue</module>
+        <module>rabbitmq-routing-queue</module>
     </modules>
 
 
