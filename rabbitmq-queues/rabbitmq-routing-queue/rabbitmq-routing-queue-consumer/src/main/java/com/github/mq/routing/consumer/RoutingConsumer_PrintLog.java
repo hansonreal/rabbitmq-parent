@@ -24,13 +24,14 @@ public class RoutingConsumer_PrintLog {
              * @param properties 配置信息
              * @param body 数据
              */
-            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) {
+            public void handleDelivery(String consumerTag, Envelope envelope,
+                                       AMQP.BasicProperties properties, byte[] body) {
                 String message = new String(body);
                 System.out.println(" [Routing Queue - 01] Received '" + message + " 该操作日志需要打印'");
             }
         };
 
-        //4.
+        //4. 监听队列
         channel.basicConsume(QUEUE_NAME_01, true, consumer);
     }
 }
