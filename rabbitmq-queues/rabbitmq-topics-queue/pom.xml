@@ -11,7 +11,7 @@
 
     <artifactId>rabbitmq-topics-queue</artifactId>
     <packaging>pom</packaging>
-    <name>0205-rabbitmq-topics-queue::主题队列模式</name>
+    <name>0205-rabbitmq-topics-queue::通配符队列模式</name>
     <modules>
         <module>rabbitmq-topics-queue-consumer</module>
         <module>rabbitmq-topics-queue-producer</module>

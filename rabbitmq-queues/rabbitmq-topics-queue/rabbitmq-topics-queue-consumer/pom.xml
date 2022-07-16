@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>rabbitmq-topics-queue-consumer</artifactId>
+    <name>020502-rabbitmq-topics-queue-consume::通配符队列模式-消费者</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github</groupId>
+            <artifactId>rabbitmq-common</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

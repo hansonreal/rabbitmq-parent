@@ -10,6 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>rabbitmq-topics-queue-producer</artifactId>
+    <name>020501-rabbitmq-topics-queue-producer::通配符队列模式-生产者</name>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github</groupId>
+            <artifactId>rabbitmq-common</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>
