@@ -11,8 +11,8 @@ import java.util.concurrent.TimeoutException;
 public class TopicsProducer {
     private static final String EXCHANGE_NAME = "test_topic";
 
-    private static final String QUEUE_NAME_PRINT = "test_topic_print";
-    private static final String QUEUE_NAME_SAVE = "test_topic_save";
+    // private static final String QUEUE_NAME_PRINT = "test_topic_print";
+    //private static final String QUEUE_NAME_SAVE = "test_topic_save";
 
     public static void main(String[] args) throws IOException, TimeoutException {
         //1. 创建连接 Connection
@@ -36,8 +36,8 @@ public class TopicsProducer {
          */
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.TOPIC, true, false, false, null);
         //4. 创建队列
-        channel.queueDeclare(QUEUE_NAME_PRINT, true, false, false, null);
-        channel.queueDeclare(QUEUE_NAME_SAVE, true, false, false, null);
+        // channel.queueDeclare(QUEUE_NAME_PRINT, true, false, false, null);
+        // channel.queueDeclare(QUEUE_NAME_SAVE, true, false, false, null);
         /**
          * 5. 绑定队列和交换机
          *  queueBind(String queue, String exchange, String routingKey)
@@ -48,9 +48,9 @@ public class TopicsProducer {
          *      如果交换机的类型为fanout ，routingKey设置为""
          */
         //=需求： 所有error级别的日志存入数据库，所有order系统的日志存入数据库
-        channel.queueBind(QUEUE_NAME_SAVE, EXCHANGE_NAME, "#.error");
-        channel.queueBind(QUEUE_NAME_PRINT, EXCHANGE_NAME, "order.*");
-        channel.queueBind(QUEUE_NAME_PRINT, EXCHANGE_NAME, "*.*");
+        // channel.queueBind(QUEUE_NAME_SAVE, EXCHANGE_NAME, "#.error");
+        //  channel.queueBind(QUEUE_NAME_PRINT, EXCHANGE_NAME, "order.*");
+        // channel.queueBind(QUEUE_NAME_PRINT, EXCHANGE_NAME, "*.*");
 
         String message = "[ERROR]  an exception occurred while calling the deleteOrderById method....";
         System.out.println(" [Topics Queue] Sent '" + message + "'");

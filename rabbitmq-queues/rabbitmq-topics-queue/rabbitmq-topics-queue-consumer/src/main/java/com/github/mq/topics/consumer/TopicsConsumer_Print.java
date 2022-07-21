@@ -9,13 +9,21 @@ import java.util.concurrent.TimeoutException;
 public class TopicsConsumer_Print {
     private static final String QUEUE_NAME_PRINT = "test_topic_print";
 
+    private static final String EXCHANGE_NAME = "test_topic";
+
     public static void main(String[] args) throws IOException, TimeoutException {
         //1. 创建连接 Connection
         Connection connection = ConnectionUtil.getConnection();
         //2. 创建Channel
         Channel channel = connection.createChannel();
+        //4. 声明队列
+        channel.queueDeclare(QUEUE_NAME_PRINT, false, false, false, null);
 
-        //3. 定义队列的消费者
+        //5. 绑定队列至指定的交换机（并写明指定的routingkey）
+        channel.queueBind(QUEUE_NAME_PRINT, EXCHANGE_NAME, "order.*");
+        channel.queueBind(QUEUE_NAME_PRINT, EXCHANGE_NAME, "*.*");
+
+        //6. 定义队列的消费者
         Consumer consumer = new DefaultConsumer(channel) {
             /**
              * 当收到消息后，会自动执行该方法
@@ -31,7 +39,7 @@ public class TopicsConsumer_Print {
             }
         };
 
-        //4. 监听队列
+        //7. 监听队列
         channel.basicConsume(QUEUE_NAME_PRINT, true, consumer);
     }
 }
