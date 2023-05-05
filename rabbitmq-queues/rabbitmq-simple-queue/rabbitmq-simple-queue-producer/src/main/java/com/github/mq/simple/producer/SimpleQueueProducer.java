@@ -20,7 +20,7 @@ public class SimpleQueueProducer {
          *
          * 如果没有一个队列名词为"SIMPLE_QUEUE_TEST_01"则会新建一个
          */
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(QUEUE_NAME, true, false, false, null);
         // 消息内容
         String message = "Hello World!";
         /*
